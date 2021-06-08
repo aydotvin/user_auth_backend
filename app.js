@@ -1,5 +1,15 @@
 require("dotenv").config();
 global.lang = require("./src/lang/default");
+
+const options = {
+	logDirectory: "./log",
+	fileNamePattern: "log-<DATE>.log",
+	dateFormat: "DD-MM-YYYY",
+	timestampFormat: "YYYY-MM-DD HH:mm:ss.SSS",
+};
+global.log = require("simple-node-logger").createRollingFileLogger(options);
+log.setLevel("trace");
+
 const cors = require("cors");
 
 //	EXPRESS INITIALISATION START
@@ -21,7 +31,7 @@ db.connect((err) => {
 		console.log("DB connection failed.");
 		console.log(err);
 	} else {
-		console.log("DB connected.");
+		log.info("DB connected.");
 	}
 });
 //	DB CONNECTION END

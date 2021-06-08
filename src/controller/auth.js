@@ -27,7 +27,7 @@ exports.userSignup = (req, res) => {
 exports.userSignin = (req, res) => {
 	console.log("req at node");
 	console.log(req.body);
-	console.log("sign in requested..");
+	log.debug("sign in requested..");
 	let data = {
 		username: req.body.username,
 		password: req.body.password,
