@@ -3,7 +3,7 @@ global.lang = require("./src/lang/default");
 
 const options = {
 	logDirectory: "./log",
-	fileNamePattern: "log-<DATE>.log",
+	fileNamePattern: "<DATE>.log",
 	dateFormat: "DD-MM-YYYY",
 	timestampFormat: "YYYY-MM-DD HH:mm:ss.SSS",
 };
