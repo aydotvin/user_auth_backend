@@ -1,9 +1,12 @@
 # Backend for user authentication.
 
-Server for user authentication. **Using Express, MySql (Raw Queries), Simple Node Logger**
+Server for user authentication.
 
-1. Bcrypt for hashing
-2. jwt for token creation and verification
+1. Routing - Express
+2. DB - MySql (Raw)
+3. Hashing - Bcrypt
+4. Authentication - JWT
+5. Logger - Simple Node Logger
 
 Steps:
 
